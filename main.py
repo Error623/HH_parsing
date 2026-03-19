@@ -1,7 +1,6 @@
 import asyncio
 import logging
 import os
-
 from aiogram import Bot, Dispatcher
 from dotenv import load_dotenv
 
@@ -10,7 +9,7 @@ from handlers import start_router, jobs_router
 
 logging.basicConfig(level=logging.INFO)
 
-load_dotenv()
+load_dotenv(dotenv_path=".env")
 
 bot = Bot(token=os.getenv("BOT_TOKEN"))
 dp = Dispatcher()
